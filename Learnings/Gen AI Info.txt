@@ -1,0 +1,258 @@
+Give all code of the above terms and all code and module should be python 3.14 compatable
+
+
+
+
+Python
+GenAI
+Vector DB
+RAGs
+Prompt Engineering
+NLP - Chunking
+Different LLMs
+Agents
+Lang Graph
+One cloud for deploy
+
+Generative Adversarial Networks (GANs)
+Variational Autoencoder (VAEs) - encoder, decoder
+VAEs vs GANs
+Latent Space
+"in-context learning"(prompt engineering) in the context of LLMs
+"Conditional Generation" - Conditional GANs (cGANs)
+
+=========================================================================
+
+Generative AI:
+
+Fine-Tuning:
+LoRA
+QLoRA
+Peft
+Reinforcement Learning from Human Feedback (RLHF)
+LLM Distilation
+
+Working of Fine-Tuning:
+Select a Pre-Trained Model
+Freeze Initial Layers
+Update Later Layers
+Use a Smaller Learning Rate
+Evaluate and Refine
+
+Types of Generative AI Models:
+Transformers or Autoregressive Models - generate sequences by predicting the next token based on all previous ones moving step by step through the text.
+Diffusion Models - generate data such as images or audio by starting with pure random noise and gradually refining it into a coherent output through a series of denoising steps.
+Variational Autoencoders (VAEs) and Generative Adversarial Networks (GANs)
+Encoder Decoder Models
+
+
+Sources:
+https://www.geeksforgeeks.org/artificial-intelligence/what-is-generative-ai/
+https://www.geeksforgeeks.org/deep-learning/what-is-fine-tuning/
+
+=========================================================================
+
+Vector DB:
+
+Different Embedding Models:
+Word Embeddings - Word2Vec, GloVe (Global Vectors for Word Representation)
+Contextual Word Embeddings - ELMo (Embeddings from Language Models), BERT (Bidirectional Encoder Representations from Transformers)
+Transformer-Based Embeddings - BERT, GPT, T5, etc.
+Document Embeddings - Doc2Vec, Paragraph Vectors (PV-DBOW and PV-DM)
+Image Embeddings - Convolutional Neural Networks (CNN) Embeddings, Pre-trained Models for Image Embeddings
+Graph Embeddings - Node Embeddings(Node2Vec and GraphSAGE)
+Knowledge Graph Embeddings - TransE, TransR, DistMult
+
+How are vector databases used?
+Vector databases serve three key functions in AI and ML applications:
+Vector storage
+Vector indexing
+Similarity search based on querying or prompting
+
+Tools for creating and deploying vector databases -  LangChain, Data lakehouse(enterprise-grade AI)
+
+API Embeddings
+Local Embeddings
+
+Building a vector Index:
+Common Vector Indexing Techniques - 
+Inverted File (IVF) [Variants of IVF: IVFFLAT, IVFPQ and IVFSQ], 
+Hierarchical Navigable Small World (HNSW) Algorithm [Different variants of HNSW: HNSWFLAT and HNSWSQ], 
+Multi-Scale Tree Graph (MSTG) Algorithm
+
+Create a vector search index:
+There are two types of indexes - Delta Sync Index, Direct Vector Access Index
+
+Text chunk size: Number of characters to include per document segment.
+Define a segment size that is smaller than the maximum number of input tokens allowed by the model. If you break the document into larger segments, some document text might be omitted because after the maximum token size limit is met, any extra characters in the segment are ignored by the embedding model.
+The chunk size is specified in characters. The number of characters per token varies by embedding model, but one token is equal to approximately 2-3 characters.
+
+Sources:
+
+https://docs.databricks.com/aws/en/vector-search/create-vector-search
+https://medium.com/@prudhviraju.srivatsavaya/different-types-of-embeddings-1693dad922be
+https://www.geeksforgeeks.org/nlp/what-are-embedding-models/
+
+=========================================================================
+
+Give all code of the above terms and all code and module should be python 3.14 compatable
+
+d1d19b41fa1a47f79e40e7417a5b2baf.7Imq854e5xhpASMBfEvr9ITP
+
+RAGs (Retrieval-Augmented Generation):
+
+Importance of RAG:
+Access to Updated Knowledge - LLMs are trained on fixed datasets but RAG allows them to fetch fresh and real time information from external sources.
+Improved Accuracy - It reduces hallucinations in LLMs and makes answers more factually correct.
+Domain Specific Expertise - It lets us use specialized datasets like medical records and legal documents to get expert-level responses without retraining the model.
+Cost Efficiency - Instead of retraining massive LLMs with new data, we simply update the external knowledge base hence saving time and resources.
+Personalization - RAG can retrieve user specific information like past interactions or personal data to provide more tailored and relevant responses.
+
+Sources:
+
+https://www.geeksforgeeks.org/nlp/what-is-retrieval-augmented-generation-rag/
+
+=========================================================================
+
+Prompt Engineering:
+
+Different Prompt Engineering Techniques:
+
+Zero-shot Prompting
+Few-shot Prompting
+Chain-of-Thought Prompting
+Meta Prompting
+Self-Consistency
+Generate Knowledge Prompting
+Prompt Chaining
+Tree of Thoughts
+Retrieval Augmented Generation
+Automatic Reasoning and Tool-use
+Automatic Prompt Engineer
+Active-Prompt
+Directional Stimulus Prompting
+Program-Aided Language Models
+ReAct
+Reflexion
+Multimodal CoT
+Graph Prompting
+
+
+Sources:
+
+https://www.promptingguide.ai/techniques
+
+==========================================================================
+
+NLP :
+
+NLP is pivotal in performing tasks such as:
+Text Classification
+Sentiment Analysis
+Language Translation
+Question Answering
+Chatbot Development
+Virtual assistants
+Search engines
+Content moderation
+
+==========================================================================
+
+Different LLMs:
+GPT(OpenAI) - 5, 4, 3.5, 3
+Gemini(Google) - Gemini Ultra is the first model to outperform human experts on MMLU (massive multitask language understanding)
+LLaMA(Meta AI)
+PaLM 2 (Bison-001)(Google AI)
+Bard(Google AI) - Google Bard stands as an experimental conversational AI service driven by LaMDA (Language Model for Dialogue Applications)
+Claude v1(Anthropic)
+Falcon(Technology Innovation Institute(TII), UAE)
+Cohere(Cohere)
+Orca(Microsoft)
+Grok(xAI)
+Granite(IBM)
+DeepSeek-V3.2-Exp(DeepSeek)
+
+
+Sources:
+
+https://en.wikipedia.org/wiki/List_of_large_language_models
+
+==========================================================================
+
+Agents:
+
+How do AI Agents Work?
+Persona
+Memory - Short-term, Long-term, Episodic, Consensus 
+Tools
+Model
+
+AI Agent Classification:
+An agent is a system designed to perceive its environment, make decisions and take actions to achieve specific goals. Agents operate autonomously, without direct human control and can be classified based on their behavior, environment and number of interacting agents.
+
+Reactive Agents - Respond to immediate environmental stimuli without foresight or planning.
+Proactive Agents - Anticipate future states and plan actions to achieve long-term goals.
+Single-Agent Systems - One agent solves a problem independently.
+Multi-Agent Systems - Multiple agents interact, coordinate or compete to achieve goals; may be homogeneous (similar roles) or heterogeneous (diverse roles).
+Rational Agents - Choose actions to maximize expected outcomes using both current and historical information.
+
+Types of Agents:
+Simple Reflex Agents
+Model-Based Reflex Agents
+Goal-Based Agents
+Utility-Based Agents
+Learning Agents
+Multi-Agent Systems (MAS)
+Hierarchical agents
+
+AIzaSyDIj6kYDhRZYiX34OFqHQ0zdxOJkzf8HBc
+
+AI Agent Frameworks:
+LangGraph
+AutoGen
+CrewAI
+Semantic Kernel
+LangChain
+No-Code and Visual AI Agent Platforms - n8n: Visual Agent Development Platform, Langflow: Modular Drag-and-Drop Framework, Dify, AutoGPT, RASA, BotPress
+AgentFlow
+Atomic Agents 
+Hugging Face Transformers Agents
+Langflow
+OpenAI Agents SDK
+Google Agent Development Kit (ADK)
+
+Sources:
+
+https://www.geeksforgeeks.org/artificial-intelligence/agents-artificial-intelligence/
+https://www.geeksforgeeks.org/artificial-intelligence/types-of-agents-in-ai/
+
+
+
+neo4j: 
+
+Instance : priyam
+DB : neo4j
+Pass : 12345678
+
+Gemini API Key : AIzaSyDIj6kYDhRZYiX34OFqHQ0zdxOJkzf8HBc
+==========================================================================
+
+Act like a gen AI developer.
+
+Requirement : Create a code analyzer that analyze codes of a whole project files in any language. Analyze all entities and relationships of the project.
+Output : Relationships between entities and project understanding.
+Use technologies : LangGraph, AI Agent Frameworks, gemini , python, RAG, Vector Database, Prompt Engineering
+
+Give all code of the above terms and all code and module should be python 3.14 compatable
+
+A well structure/folder files should be followed.
+
+Give me a downloadable Zip of the whole solution.
+
+
+d9cb568cafd2473da6b0e03233036b62.n5d-DnhvRC8JXF0V-kFKRDMq
+
+
+Add a chat system to the code analyzer. Act like an agent for question answering for a project.
+
+Do not change the core logic of the existing code provided on attachments, existing code it is working fine on production.
